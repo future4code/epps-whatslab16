@@ -1,5 +1,25 @@
 .App {
   text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.main-container {
+  text-align: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+input {
+  margin-top: 670px;
+}
+
+#nameUser {
+  width: 100px;
+}
+
+#textMessage {
+  width: 500px;
 }
 
 .App-logo {
