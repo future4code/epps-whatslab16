@@ -12,50 +12,48 @@ export const MessageWindow = () => {
   </div>
 }
 
-class JanelaMensagem extends React.Component {
-    state = {
-        janelaMensagem: [
-            {
-                usuario: '',
-                mensagem: ''
-            }
-        ],
-        valorInputUsuario: '',
-        valorInputMensagem: ''
-    }
+// class JanelaMensagem extends React.Component {
+//     state = {
+//         janelaMensagem: [
+//             {
+//                 usuario: '',
+//                 mensagem: ''
+//             }
+//         ],
+//         valorInputUsuario: '',
+//         valorInputMensagem: ''
+//     }
 
 
-    adicionaMensagem = () => {
-        const novaMensagem = {
-            usuario: this.state.valorInputUsuario,
-            mensagem: this.state.valorInputMensagem
-        };
+//     adicionaMensagem = () => {
+//         const novaMensagem = {
+//             usuario: this.state.valorInputUsuario,
+//             mensagem: this.state.valorInputMensagem
+//         };
 
-        const novasMensagens = [... this.state.janelaMensagem, novaMensagem];
-        this.setState({janelaMensagem: novaMensagem});
+//         const novasMensagens = [... this.state.janelaMensagem, novaMensagem];
+//         this.setState({janelaMensagem: novaMensagem});
 
-        onChangeInputUsuario = (e) => {
-            this.setState({valorInputUsuario: e.target.value});
-        };
+//         onChangeInputUsuario = (e) => {
+//             this.setState({valorInputUsuario: e.target.value});
+//         };
 
-        onChangeInputMensagem = (e) => {
-            this.setState({valorInputMensagem: e.targe.value});
-        };
-    }
-        render() {
-            const listaMensagens = this.state.janelaMensagem.map((mensagem) => {
-                return (
-                    <p> 
-                        {mensagem.usuario}
-                        {mensagem.mensagem}
-                    </p>
-                );
-            });
-        };
+//         onChangeInputMensagem = (e) => {
+//             this.setState({valorInputMensagem: e.targe.value});
+//         };
+//     }
+//         render() {
+//             const listaMensagens = this.state.janelaMensagem.map((mensagem) => {
+//                 return (
+//                     <p> 
+//                         {mensagem.usuario}
+//                         {mensagem.mensagem}
+//                     </p>
+//                 );
+//             });
+//         };
 
-        return (
+//         return (
             
-        )
-};
-
-export default JanelaMensagem;
+//         )
+// };
