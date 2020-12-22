@@ -6,15 +6,17 @@ import styled from 'styled-components';
 const MessageWindowContainer = styled.div`
   border: 1px solid black;
   height: 100vh;
-  width: 600px;
+  width: 650px;
   margin: auto;
-  box-sizing: border-box;
   display: flex;
+  
 `
 
 const TextContainer = styled.div`
   margin-top: 500px;
   padding: 10px;
+  display: flex;
+  flex-direction: column-reverse;
 `
 
 const InputContainer = styled.div`
