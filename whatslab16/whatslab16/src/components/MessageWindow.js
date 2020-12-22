@@ -13,86 +13,86 @@ import styled from 'style-components';
 //   </div>
 // }
 
-export default class App extends React.Component {
-  state = {
-    janelaMensagem: [
+// export default class App extends React.Component {
+//   state = {
+//     janelaMensagem: [
 
-      {
-        usuario: '',
-        mensagem: '',
+//       {
+//         usuario: '',
+//         mensagem: '',
         
-      }
+//       }
 
-    ],    
+//     ],    
   
-      valorInputUsuario: '',
-      valorInputMensagem: '',
+//       valorInputUsuario: '',
+//       valorInputMensagem: '',
   
 
-  };
+//   };
 
-  adicionaMensagem = () => {
+//   adicionaMensagem = () => {
 
-    const novaMensagem = {
-    usuario: this.state.valorInputUsuario,
-    mensagem: this.state.valorInputMensagem,
+//     const novaMensagem = {
+//     usuario: this.state.valorInputUsuario,
+//     mensagem: this.state.valorInputMensagem,
     
-    };
+//     };
 
-    const mensagemTela = [...this.state.janelaMensagem, novaMensagem];
-    this.setState({janelaMensagem: mensagemTela });
-    this.setState({valorInputUsuario: ''})
-    this.setState({valorInputMensagem: ''})
-   };   
+//     const mensagemTela = [...this.state.janelaMensagem, novaMensagem];
+//     this.setState({janelaMensagem: mensagemTela });
+//     this.setState({valorInputUsuario: ''})
+//     this.setState({valorInputMensagem: ''})
+//    };   
    
 
-  onChangeInputUsuario = (e) =>{
-    this.setState({valorInputUsuario: e.target.value});
-  };
+//   onChangeInputUsuario = (e) =>{
+//     this.setState({valorInputUsuario: e.target.value});
+//   };
   
-  onChangeInputMensagem = (e) =>{
-    this.setState({valorInputMensagem: e.target.value});
-  };
+//   onChangeInputMensagem = (e) =>{
+//     this.setState({valorInputMensagem: e.target.value});
+//   };
 
 
 
-render() {
-  const mensagemCompleta = this.state.janelaMensagem.map((texto) =>{
-    return(
-      <p>
-        {texto.usuario} - {texto.mensagem} 
-      </p>
-    );
-  }); 
+// render() {
+//   const mensagemCompleta = this.state.janelaMensagem.map((texto) =>{
+//     return(
+//       <p>
+//         {texto.usuario} - {texto.mensagem} 
+//       </p>
+//     );
+//   }); 
 
-  return (
-    <Container className="App">
+//   return (
+//     <Container className="App">
       
-      <Titulo>Whatslab</Titulo>
+//       <Titulo>Whatslab</Titulo>
       
-      <div>
-      <input 
+//       <div>
+//       <input 
             
-      value = {this.state.valorInputUsuario} 
-      onChange={this.onChangeInputUsuario}
-      placeholder = {"Usuário"}
-      />
+//       value = {this.state.valorInputUsuario} 
+//       onChange={this.onChangeInputUsuario}
+//       placeholder = {"Usuário"}
+//       />
 
-      <input 
-      value = {this.state.valorInputMensagem} 
-      onChange={this.onChangeInputMensagem} 
-      placeholder = {"Mensagem"} />
+//       <input 
+//       value = {this.state.valorInputMensagem} 
+//       onChange={this.onChangeInputMensagem} 
+//       placeholder = {"Mensagem"} />
   
 
-      <Botao onClick={this.adicionaMensagem}>Enviar</Botao>
-      </div>
+//       <Botao onClick={this.adicionaMensagem}>Enviar</Botao>
+//       </div>
       
-      <div>{mensagemCompleta}</div>
+//       <div>{mensagemCompleta}</div>
       
-    </Container>
-  )
-}
-}
+//     </Container>
+//   )
+// }
+// }
 
 // class JanelaMensagem extends React.Component {
 //     state = {

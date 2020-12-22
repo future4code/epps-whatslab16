@@ -23,34 +23,53 @@ const InputContainer = styled.div`
 
 
 class App extends React.Component {
+  state = {
+    janelaMensagem: [],
+    valorInputUsuario: '',
+    valorInputMensagem: '',
+  }
+
+  onChangeInputUsuario = (e) =>{
+    this.setState({valorInputUsuario: e.target.value});
+  }
+  
+  onChangeInputMensagem = (e) =>{
+    this.setState({valorInputMensagem: e.target.value});
+  }
+
+  adicionaMensagem = () => {
+    const novaMensagem = {
+        usuario: this.state.valorInputUsuario,
+        mensagem: this.state.valorInputMensagem,
+    }  
+
+    const mensagemTela = [novaMensagem, ...this.state.janelaMensagem];
+    this.setState({janelaMensagem: mensagemTela, valorInputUsuario: '', valorInputMensagem: ''});
+   }
+
+
   render () {
-      const janelaMensagem = [
-  
-        {
-          usuario: '',
-          mensagem: '',
-          
-        }
-  
-      ] 
+    console.log(this.state.valorInputUsuario)
+    console.log(this.state.valorInputMensagem)
       
     return (
       <MessageWindowContainer>
         <TextContainer>
-        {janelaMensagem.map((texto) => {
-        return <p>
-          {texto.usuario}: {texto.mensagem}
-        </p>
-       })}  
+          {this.state.janelaMensagem.map((texto) => {
+            return <p>
+              <strong>{texto.usuario}</strong>: {texto.mensagem}
+            </p>
+        })}  
+
         </TextContainer> 
         <InputContainer>
-          <input id="nameUser" placeholder={"Usuário"}
+          <input id="nameUser" onChange={this.onChangeInputUsuario} value={this.state.valorInputUsuario} placeholder={"Usuário"}
           type="text"
           />
-          <input id="textMessage" placeholder={"Mensagem"}
+          <input id="textMessage" onChange={this.onChangeInputMensagem} value={this.state.valorInputMensagem} placeholder={"Mensagem"}
           type="text"
           />
-          <button>Enviar</button>
+          <button onClick={this.adicionaMensagem}>Enviar</button>
         </InputContainer>
       </MessageWindowContainer>
     );
