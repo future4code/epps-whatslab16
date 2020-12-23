@@ -6,21 +6,22 @@ import styled from 'styled-components';
 const MessageWindowContainer = styled.div`
   border: 1px solid black;
   height: 100vh;
-  width: 600px;
+  width: 38em;
   margin: auto;
   box-sizing: border-box;
   display: flex;
 `
 
 const TextContainer = styled.div`
-  margin-top: 500px;
-  padding: 10px;
+  margin-top: 37em;
+
 `
 
 const InputContainer = styled.div`
-  margin-top: 660px;
+  margin-top: 37em;
+  margin-left: auto;
+  margin-right: auto;
 `
-
 
 class App extends React.Component {
   state = {
@@ -59,8 +60,7 @@ class App extends React.Component {
             return <p>
               <strong>{texto.usuario}</strong>: {texto.mensagem}
             </p>
-        })}  
-
+        })}
         </TextContainer> 
         <InputContainer>
           <input id="nameUser" onChange={this.onChangeInputUsuario} value={this.state.valorInputUsuario} placeholder={"Usuário"}
