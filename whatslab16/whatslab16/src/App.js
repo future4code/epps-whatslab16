@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import './App.css';
+import './App.css'
 // import {MessageWindow} from './components/MessageWindow';
 
 
@@ -15,11 +15,10 @@ const MessageWindowContainer = styled.div`
 
 const TextContainer = styled.div`
   margin-top: 37em;
-
 `
 
 const InputContainer = styled.div`
-  margin-top: 37em;
+  margin-top: 37.5em;
   margin-left: auto;
   margin-right: auto;
 `
