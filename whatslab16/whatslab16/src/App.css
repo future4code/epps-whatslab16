@@ -9,13 +9,54 @@
   border: 1px solid black;
 }
 
+.main-container:hover {
+  border-radius: 20px;
+}
+
+.text-container {
+  border: 2px;
+  padding: 20rem;
+}
+
+.text-container:hover {
+  border-radius: 20px;
+}
 
 #nameUser {
-  width: 10em;
+  padding: 1em;
+  width: 6em;
 }
 
 #textMessage {
-  width: 30em;
+  padding: 1em;
+  width: 31em;
+}
+
+.botao{
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight:700;
+  border: none;
+  padding: 10px;
+  text-decoration: none;
+}
+.botao-bio{
+  height: 3.4em;
+  background:rgb(36, 36, 36);
+  color:#fff;
+  box-shadow:0 5px 0 #000000;
+}
+
+.botao-bio:hover{
+  cursor: pointer;
+  background:#015b67;
+  box-shadow: 0 5px 0 #00383f;
+}
+
+.botao-bio:active{
+  position: relative;
+  top: 5px;
+  box-shadow: none;
 }
 
 .App-logo {

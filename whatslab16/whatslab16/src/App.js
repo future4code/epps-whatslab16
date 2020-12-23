@@ -1,37 +1,37 @@
 import React from 'react';
 import styled from 'styled-components';
 import './App.css'
+// import Background from './img/background.jpg';
 // import {MessageWindow} from './components/MessageWindow';
 
 
 const MessageWindowContainer = styled.div`
+  background-color: #49b675;
   border: 1px solid black;
   height: 100vh;
-<<<<<<< HEAD
-  width: 650px;
-=======
   width: 38em;
->>>>>>> 8872de02befc95580ab65a6697de0fd13d9aa410
   margin: auto;
   display: flex;
-  
 `
 
 const TextContainer = styled.div`
-<<<<<<< HEAD
-  margin-top: 500px;
   padding: 10px;
   display: flex;
   flex-direction: column-reverse;
-=======
-  margin-top: 37em;
->>>>>>> 8872de02befc95580ab65a6697de0fd13d9aa410
+  margin-bottom: 3em;
+  display: flex;
+  align-items: flex-start;
+  align-self: stretch;
 `
 
 const InputContainer = styled.div`
-  margin-top: 37.5em;
+  margin-top: 40.5em;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  align-items: flex-end;
+  align-self: stretch;
+  position: absolute;
 `
 
 class App extends React.Component {
@@ -65,7 +65,10 @@ class App extends React.Component {
     console.log(this.state.valorInputMensagem)
       
     return (
-      <MessageWindowContainer>
+      <MessageWindowContainer
+      // background={Background}
+      >
+    
         <TextContainer>
           {this.state.janelaMensagem.map((texto) => {
             return <p>
@@ -80,8 +83,9 @@ class App extends React.Component {
           <input id="textMessage" onChange={this.onChangeInputMensagem} value={this.state.valorInputMensagem} placeholder={"Mensagem"}
           type="text"
           />
-          <button onClick={this.adicionaMensagem}>Enviar</button>
+          <button class="botao" class="botao-bio" onClick={this.adicionaMensagem}>Enviar</button>
         </InputContainer>
+        
       </MessageWindowContainer>
     );
     
