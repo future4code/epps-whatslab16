@@ -29,9 +29,8 @@ const InputContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  align-items: flex-end;
-  align-self: stretch;
   position: fixed;
+  bottom: 0;
 `
 
 class App extends React.Component {
